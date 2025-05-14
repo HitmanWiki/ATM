@@ -8,9 +8,9 @@
 }
 
 .elementor-widget-heading .elementor-heading-title {
-    font-family: var( --e-global-typography-primary-font-family), Sans-serif;
-    font-weight: var( --e-global-typography-primary-font-weight);
-    color: var( --e-global-color-primary);
+    font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+    font-weight: var(--e-global-typography-primary-font-weight);
+    color: var(--e-global-color-primary);
 }
 
 .elementor-8 .elementor-element.elementor-element-abe3484 {
@@ -47,9 +47,9 @@
 }
 
 .elementor-widget-image .widget-image-caption {
-    color: var( --e-global-color-text);
-    font-family: var( --e-global-typography-text-font-family), Sans-serif;
-    font-weight: var( --e-global-typography-text-font-weight);
+    color: var(--e-global-color-text);
+    font-family: var(--e-global-typography-text-font-family), Sans-serif;
+    font-weight: var(--e-global-typography-text-font-weight);
 }
 
 .elementor-8 .elementor-element.elementor-element-2ea4335 img {
@@ -66,13 +66,13 @@
 }
 
 .elementor-widget-button .elementor-button {
-    background-color: var( --e-global-color-accent);
-    font-family: var( --e-global-typography-accent-font-family), Sans-serif;
-    font-weight: var( --e-global-typography-accent-font-weight);
+    background-color: var(--e-global-color-accent);
+    font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+    font-weight: var(--e-global-typography-accent-font-weight);
 }
 
 .elementor-8 .elementor-element.elementor-element-5e31e28 .elementor-button {
-    background-color: var( --e-global-color-f8a0c08);
+    background-color: var(--e-global-color-f8a0c08);
     font-family: "Roboto", Sans-serif;
     font-size: 19px;
     font-weight: 600;
@@ -96,7 +96,7 @@
 }
 
 .elementor-8 .elementor-element.elementor-element-a943dbd {
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, border 0.3s, border-radius 0.5s, box-shadow 0.3s;
 }
 
 .elementor-8 .elementor-element.elementor-element-a943dbd>.elementor-background-overlay {
@@ -127,19 +127,19 @@
 }
 
 .elementor-widget-text-editor {
-    font-family: var( --e-global-typography-text-font-family), Sans-serif;
-    font-weight: var( --e-global-typography-text-font-weight);
-    color: var( --e-global-color-text);
+    font-family: var(--e-global-typography-text-font-family), Sans-serif;
+    font-weight: var(--e-global-typography-text-font-weight);
+    color: var(--e-global-color-text);
 }
 
 .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
-    background-color: var( --e-global-color-primary);
+    background-color: var(--e-global-color-primary);
 }
 
 .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap,
 .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap {
-    color: var( --e-global-color-primary);
-    border-color: var( --e-global-color-primary);
+    color: var(--e-global-color-primary);
+    border-color: var(--e-global-color-primary);
 }
 
 .elementor-8 .elementor-element.elementor-element-6a21846 {
@@ -148,7 +148,7 @@
 }
 
 .elementor-8 .elementor-element.elementor-element-181c516 .elementor-button {
-    background-color: var( --e-global-color-65b3bcc);
+    background-color: var(--e-global-color-65b3bcc);
     font-family: "Roboto", Sans-serif;
     font-size: 29px;
     font-weight: 900;
@@ -168,7 +168,7 @@
 }
 
 .elementor-8 .elementor-element.elementor-element-b5b193e .elementor-button {
-    background-color: var( --e-global-color-65b3bcc);
+    background-color: var(--e-global-color-65b3bcc);
     font-family: "Roboto", Sans-serif;
     font-size: 29px;
     font-weight: 900;
@@ -189,7 +189,7 @@
 
 .elementor-8 .elementor-element.elementor-element-8aab76d:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-8aab76d>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-color: var( --e-global-color-3f0998d);
+    background-color: var(--e-global-color-3f0998d);
 }
 
 .elementor-8 .elementor-element.elementor-element-8aab76d {
@@ -280,7 +280,7 @@
 
 .elementor-8 .elementor-element.elementor-element-8b785fb:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-8b785fb>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-color: var( --e-global-color-3f0998d);
+    background-color: var(--e-global-color-3f0998d);
 }
 
 .elementor-8 .elementor-element.elementor-element-8b785fb {
@@ -427,7 +427,7 @@
 
 .elementor-8 .elementor-element.elementor-element-2e935ba:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-2e935ba>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-color: var( --e-global-color-f8a0c08);
+    background-color: var(--e-global-color-f8a0c08);
 }
 
 .elementor-8 .elementor-element.elementor-element-2e935ba>.elementor-container {
@@ -465,27 +465,35 @@
     .elementor-8 .elementor-element.elementor-element-da8ccf6 .elementor-heading-title {
         font-size: 50px;
     }
+
     .elementor-8 .elementor-element.elementor-element-dcc7a4f {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-bd7a1aa {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-08a1e65 {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-5fc9d39 {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-9c2e641 {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-1cb7e13 {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-3ff7318 {
         width: 50%;
     }
+
     .elementor-8 .elementor-element.elementor-element-1f5986e {
         width: 50%;
     }
@@ -495,6 +503,7 @@
     .elementor-8 .elementor-element.elementor-element-e016914 {
         width: 43.543%;
     }
+
     .elementor-8 .elementor-element.elementor-element-706444c {
         width: 22.767%;
     }
