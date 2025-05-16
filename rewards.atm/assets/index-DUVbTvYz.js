@@ -21113,7 +21113,7 @@ function RC(t) {
     const e = [];
     return cp(t, e), e
 }
-const TC = "0x888fc272Df7a29785e9426393A1AB3487a057B6f",
+const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
     Gu = 18,
     OC = ["function getUnpaidEarnings(address shareholder) external view returns (uint256)", "function shares(address) external view returns (uint256 amount, uint256 totalExcluded, uint256 totalRealised)", "function totalDividends() external view returns (uint256)", "function totalDistributed() external view returns (uint256)", "function isDividendExempt(address) external view returns (bool)", "function balanceOf(address) external view returns (uint256)"],
     Hu = t => t >= 1e6 ? (t / 1e6).toFixed(2) + "M" : t >= 1e5 ? (t / 1e3).toFixed(2) + "K" : t.toLocaleString("en-US", {
