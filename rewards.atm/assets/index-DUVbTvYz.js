@@ -21116,10 +21116,13 @@ function RC(t) {
 const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
     Gu = 18,
     OC = ["function getUnpaidEarnings(address shareholder) external view returns (uint256)", "function shares(address) external view returns (uint256 amount, uint256 totalExcluded, uint256 totalRealised)", "function totalDividends() external view returns (uint256)", "function totalDistributed() external view returns (uint256)", "function isDividendExempt(address) external view returns (bool)", "function balanceOf(address) external view returns (uint256)"],
-    Hu = t => t >= 1e6 ? (t / 1e6).toFixed(2) + "M" : t >= 1e5 ? (t / 1e3).toFixed(2) + "K" : t.toLocaleString("en-US", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    }),
+    Hu = t => {
+        const num = Number(t);
+        return isNaN(num) ? "0.00" : num.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    },
     FC = () => {
         const [t, e] = ce.useState(""), [n, r] = ce.useState(!1), [i, s] = ce.useState(!1), [o, l] = ce.useState({
             personalPending: 0,
@@ -21137,8 +21140,15 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                 console.log("Total distributed (raw):", C.toString());
                 const y = await x.totalDividends();
                 console.log("Total dividends (raw):", y.toString());
-                const w = Number(Ou(C, Gu)),
-                    E = Number(Ou(y, Gu)),
+
+                console.log("Pre-conversion values:", {
+                    rawDistributed: C.toString(),
+                    rawDividends: y.toString()
+                });
+                const w = Number(C) / Math.pow(10, Gu),
+                    E = Number(y) / Math.pow(10, Gu),
+
+
                     B = {
                         personalPending: 0,
                         personalDistributed: 0,
@@ -21178,10 +21188,10 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                         className: "text-4xl font-bold mb-2 text-gray-900 flex items-center justify-center gap-2",
                         children: [G.jsx(eb, {
                             className: "w-10 h-10 text-blue-600"
-                        }), "ATM Dashboard"]
+                        }), "Binance Printer Dashboard"]
                     }), G.jsxs("p", {
                         className: "text-gray-600",
-                        children: ["Hold ATM & Earn USDC Automatically! ", G.jsx(q2, {
+                        children: ["Hold PRINTR & Earn USDT Automatically! ", G.jsx(q2, {
                             className: "inline w-5 h-5 text-green-500"
                         })]
                     })]
@@ -21200,7 +21210,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                     children: "Check Your Rewards"
                                 }), G.jsx("p", {
                                     className: "text-gray-600 text-sm",
-                                    children: "View your personal USDC rewards from holding ATM"
+                                    children: "View your personal USDT rewards from holding PRINTR"
                                 }), G.jsxs($l, {
                                     onClick: () => r(!0),
                                     className: "w-full bg-blue-600 p-3 hover:bg-blue-700 text-white",
@@ -21223,7 +21233,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                     children: "Global Statistics"
                                 }), G.jsx("p", {
                                     className: "text-gray-600 text-sm",
-                                    children: "View total USDC rewards distributed to all holders"
+                                    children: "View total USDT rewards distributed to all holders"
                                 }), G.jsxs($l, {
                                     onClick: () => s(!0),
                                     className: "w-full bg-green-600 p-3 hover:bg-green-700 text-white",
@@ -21319,7 +21329,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                         children: "Your Pending Rewards"
                                     }), G.jsxs("div", {
                                         className: "text-2xl font-bold text-green-600",
-                                        children: ["$", o.personalPending, " USDC"]
+                                        children: ["$", o.personalPending, " USDT"]
                                     })]
                                 }), G.jsxs("div", {
                                     className: "p-4 bg-blue-50 rounded-lg",
@@ -21328,7 +21338,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                         children: "Your Total Rewards Distributed"
                                     }), G.jsxs("div", {
                                         className: "text-2xl font-bold text-blue-600",
-                                        children: ["$", o.personalDistributed, " USDC"]
+                                        children: ["$", o.personalDistributed, " USDT"]
                                     })]
                                 })]
                             })
@@ -21354,7 +21364,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                         children: "Total Pending Rewards"
                                     }), G.jsxs("div", {
                                         className: "text-2xl font-bold text-green-600",
-                                        children: ["$", o.totalPending, " USDC"]
+                                        children: ["$", o.totalPending, " USDT"]
                                     }), G.jsx("div", {
                                         className: "text-sm text-gray-500 mt-1",
                                         children: "Still accumulating! 🖨️"
@@ -21366,7 +21376,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                                         children: "Total Rewards Distributed"
                                     }), G.jsxs("div", {
                                         className: "text-2xl font-bold text-blue-600",
-                                        children: ["$", o.totalDistributed, " USDC"]
+                                        children: ["$", o.totalDistributed, " USDT"]
                                     }), G.jsx("div", {
                                         className: "text-sm text-gray-500 mt-1",
                                         children: "Total rewards distributed so far! 💰"
@@ -21383,7 +21393,7 @@ const TC = "0x88807fDabF60fdDd7bd8fB4987dC5A63cbd31f6a",
                             className: "text-center space-y-2",
                             children: [G.jsx("div", {
                                 className: "text-blue-600 font-semibold",
-                                children: "💰 PRINT MONEY with ATM! 💰"
+                                children: "💰 PRINT MONEY with PRINTR! 💰"
                             }), G.jsx("div", {
                                 className: "text-gray-600",
                                 children: "🖨️ The more you hold, the more you earn! 🖨️"
