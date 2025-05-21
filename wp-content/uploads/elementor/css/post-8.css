@@ -58,11 +58,13 @@
 
 .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-01b8b09.elementor-column .elementor-widget-wrap {
     align-items: center;
+
 }
 
 .elementor-8 .elementor-element.elementor-element-01b8b09.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
+    padding-top: 100px;
 }
 
 .elementor-widget-button .elementor-button {
